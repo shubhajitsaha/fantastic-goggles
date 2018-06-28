@@ -1,0 +1,23 @@
+.view {
+    background: url("https://www.istarsoft.com/wp-content/uploads/2018/02/Blur-Background-App-750x430.png")no-repeat center center;
+    background-size: cover;
+    height: 50vh;
+}
+
+.profile-pic{
+    display: inline-block;
+}
+
+.navbar {
+    background-color: transparent;
+}
+
+.top-nav-collapse {
+    background-color: #4285F4;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        background-color: #4285F4;
+    }
+}

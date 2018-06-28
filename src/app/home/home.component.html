@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);">
+      <div class="text-white text-center px-4 my-5">
+        <div>
+          <button type="button" class="btn btn-danger float-right" routerLink="/product">+ Add</button>
+          <h1>Products</h1>
+          <table class="table">
+            <thead class="blue-grey">
+              <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Color</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let product of products;">
+                <td>{{product.id}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.color}}</td>
+                <td>
+                  <button type="button" [routerLink]="['/update',product.id]" class="btn btn-secondary">Update</button>
+                  <button type="button" (click)="delete(product.id)" class="btn btn-danger">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

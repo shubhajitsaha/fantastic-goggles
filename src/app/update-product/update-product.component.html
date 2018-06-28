@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);">
+            <div class="text-white px-4 my-5">
+                <div>
+                    <h1 class="text-center">Update Product</h1>
+                    <button type="button" class="btn btn-danger" routerLink="/">&lt; Back</button>
+                    <div class="text-center">                   
+                      <form (ngSubmit)="updateProduct()" #heroForm="ngForm">
+                        <!-- Default input name -->
+                        <label for="forName" class="red-text">Name</label>
+                        <input type="text" [(ngModel)]="product.name"  name="name" #name="ngModel" id="forName" class="form-control" required>
+                        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                          Name is required
+                        </div>
+                        <br>
+                    
+                        <!-- Default input email -->
+                        <label for="forColor" class="red-text">Color</label>
+                        <input type="email" [(ngModel)]="product.color" name="color" #color="ngModel" id="forColor" class="form-control" required>
+                        <div [hidden]="color.valid || color.pristine" class="alert alert-danger">
+                              Color is required
+                            </div>
+                        <br>
+  
+                        <button type="submit" class="btn btn-danger" [disabled]="!heroForm.form.valid">Save</button>
+                    </form>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
